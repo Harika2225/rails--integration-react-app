@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import TaskModal from "./TaskModal";
 import "./styles.css";
 
-const ExampleComponent = () => {
+const TaskList = () => {
   const [tasks, setTasks] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [currentTask, setCurrentTask] = useState({
@@ -180,4 +180,4 @@ const ExampleComponent = () => {
   );
 };
 
-export default ExampleComponent;
+export default TaskList;
