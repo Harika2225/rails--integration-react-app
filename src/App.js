@@ -1,12 +1,19 @@
-import './App.css';
-import ExampleComponent from './components/ExampleComponent';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ExampleComponent from "./components/TaskList";
+import TaskReport from "./components/TaskReport";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <ExampleComponent/>
-    </div>
+    <Router>
+      <div>
+        <Switch>
+          <Route path="/" exact component={ExampleComponent} />
+          <Route path="/report" component={TaskReport} />
+        </Switch>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
