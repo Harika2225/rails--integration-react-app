@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 const CustomerModal = ({ isOpen, onClose, onSubmit, initialValues }) => {
   const initialData = {
-    firstName: '',
-    lastName: '',
+    firstname: '',
+    lastname: '',
     email: '',
     phone: '',
     address: '',
@@ -11,7 +11,6 @@ const CustomerModal = ({ isOpen, onClose, onSubmit, initialValues }) => {
   const [formData, setFormData] = useState(initialData);
 
   useEffect(() => {
-    // Update form data when initialValues change
     setFormData(initialValues || {});
   }, [initialValues]);
 
@@ -107,8 +106,8 @@ const CustomerModal = ({ isOpen, onClose, onSubmit, initialValues }) => {
             </label>
             <input
               type="text"
-              value={formData.firstName}
-              onChange={e => handleInputChange('firstName', e.target.value)}
+              value={formData.firstname}
+              onChange={e => handleInputChange('firstname', e.target.value)}
               style={{
                 paddingLeft: '5px',
                 flex: 1,
@@ -133,8 +132,8 @@ const CustomerModal = ({ isOpen, onClose, onSubmit, initialValues }) => {
             </label>
             <input
               type="text"
-              value={formData.lastName}
-              onChange={e => handleInputChange('lastName', e.target.value)}
+              value={formData.lastname}
+              onChange={e => handleInputChange('lastname', e.target.value)}
               style={{
                 paddingLeft: '5px',
                 flex: 1,
